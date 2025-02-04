@@ -14,7 +14,9 @@ Créez le type HttpMethod, qui combine les valeurs suivantes (chaines de caract�
 Retenez ces verbes, ils sont utilisés aussi bien en backend qu'en frontend
 */
 
-// Implémentez ici
+class HttpMethod {
+    
+}
 
 /*
 2. La Requête 
