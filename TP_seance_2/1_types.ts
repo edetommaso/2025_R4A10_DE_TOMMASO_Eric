@@ -14,9 +14,7 @@ Créez le type HttpMethod, qui combine les valeurs suivantes (chaines de caract�
 Retenez ces verbes, ils sont utilisés aussi bien en backend qu'en frontend
 */
 
-class HttpMethod {
-    
-}
+type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 /*
 2. La Requête 
@@ -37,7 +35,16 @@ Créez le type associé
 A noter: En TS, on note l'inconnu avec le type unknown. Ce type évite d'utiliser any et nécessite un cast ultérieur vers la valeur souhaitée
 */
 
-// Implémentez ici
+type requete = {
+    method: HttpMethod;
+    url:string;
+    params?:Array<string>;
+    query?:string | Record<string,number>;
+    body?:Record<string,unknown>;
+    headers: {
+        "Content-Type": string & Record<string,number>
+    };
+}
 
 /* 
 3. Guard
@@ -53,7 +60,10 @@ La fonction canActivate prend un paramètre, de type Request
 Retenez la notion de Guard, elle vous sera utile en Angular également
 */
 
-// Implémentez ici
+type Guard = {
+    canActivate(): boolean;
+    promesse()
+}
 
 /*
 4. Interceptor 
