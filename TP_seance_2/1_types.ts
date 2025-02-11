@@ -61,7 +61,7 @@ Retenez la notion de Guard, elle vous sera utile en Angular également
 */
 
 type Guard = {
-    canActivate(): boolean;
+    canActivate(): boolean | promesse();
     promesse()
 }
 

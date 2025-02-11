@@ -1,0 +1,11 @@
+<header>
+    <div class="container">
+        <img src="/assets/logo.png" alt="logo" class="logo">
+        <p>{{title}}</p>
+      <nav class="nav-menu">
+        @for (lien of menus; track $index) {
+        <a [href]="lien.href" class="nav-link">{{lien.label}}</a>
+        }
+      </nav>
+    </div>
+  </header>
