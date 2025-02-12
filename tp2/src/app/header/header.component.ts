@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 
 export class HeaderComponent {
   title = "Trafalgar";
-
+  
   menus = [
     { label: "Home", href: "#" },
     { label: "Find a doctor", href: "#" },
