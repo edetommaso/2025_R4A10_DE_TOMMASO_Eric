@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { ContenueComponent } from './contenue/contenue.component';
 
 @Component({
   selector: 'app-element',
   standalone: true,
-  imports: [ContenueComponent],
+  imports: [],
   templateUrl: './element.component.html',
   styleUrl: './element.component.sass'
 })
 export class ElementComponent {
-  illustration= "/assets/virtual-healthcare.png";
+
 }
