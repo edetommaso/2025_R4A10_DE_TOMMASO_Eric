@@ -61,8 +61,7 @@ Retenez la notion de Guard, elle vous sera utile en Angular également
 */
 
 type Guard = {
-    canActivate(): boolean | promesse();
-    promesse()
+    canActivate(): boolean | Promise<boolean>;
 }
 
 /*
@@ -76,7 +75,10 @@ Le type est également très simple, il contient une fonction intercept, qui ne 
 Angular utilise également la notion d'intercepteur, nous la verrons en troisième année
 */
 
-// Implémentez ici
+type Interceptor = {
+    intercept: (Request: requete)=>void;
+    
+}
 
 /*
 5. Déclarez un type ValidationSchema.
@@ -98,7 +100,10 @@ Le type ValidationSchema est constitué de deux propriétés:
 - required, un tableau de chaines de caractères, facultatif
 */
 
-// Implémentez ici
+type ValidationSchema ={
+    fields:Record<string,Record<string,unknown>>;
+    required ?:string[];
+}
 
 /*
 6. La Route
@@ -115,9 +120,18 @@ Une route est composée des paramètres suivants:
 - responseInterceptors, une liste d'Interceptors, facultative
 
 Vous verrez tout ça plus en détail en cours d'Architecture et en troisième année
-/*
+*/
 
-// Implémentez ici
+type Route ={
+    path:string,
+    method:HttpMethod,
+    handler:string,
+    guards?:Guard[],
+    validationSchema?:ValidationSchema,
+    requestInterceptor?:Interceptor[],
+    reponseInterceptor?:Interceptor[]
+
+}
 
 
 /*
@@ -135,3 +149,9 @@ Notre réponse aura les propriétés suivantes:
 Angular gèrera une bonne partie de la réponse pour vous, il vous donnera directement accès au body, et propose un 
 système de gestion d'erreur.
 */
+
+type Reponse = {
+    statusCode : number,
+    headers : Record<"Content-type",unknown> & Record<string,unknown>,
+    body: Record<string,unknown>
+}
