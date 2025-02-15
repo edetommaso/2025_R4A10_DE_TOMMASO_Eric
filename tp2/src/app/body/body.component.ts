@@ -10,5 +10,5 @@ import { ServicesComponent } from './services/services.component';
   styleUrl: './body.component.sass'
 })
 export class BodyComponent {
-
+  
 }
