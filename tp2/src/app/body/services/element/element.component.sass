@@ -1,15 +1,14 @@
 .cartes
   display: grid
-  grid-template-columns: repeat(3, 1fr) // 3 colonnes égales
+  grid-template-columns: repeat(3, 1fr)
   gap: 20px
   justify-content: center
-  align-items: start
-  padding: 40px
+  align-items: center
   max-width: 1200px
   margin: 0 auto
   
-  @media (max-width: 1024px) // 2 colonnes sur tablette
+  @media (max-width: 1024px)
     grid-template-columns: repeat(2, 1fr)
-
-  @media (max-width: 768px) // 1 colonne sur mobile
+  
+  @media (max-width: 768px)
     grid-template-columns: repeat(1, 1fr)

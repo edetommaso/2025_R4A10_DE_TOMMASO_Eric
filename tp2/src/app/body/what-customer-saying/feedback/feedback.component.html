@@ -1,16 +1,7 @@
 <div class="testimonial-card">
-    <h2 class="title">What our customers are saying</h2>
+  <h2 class="title">What our customers are saying</h2>
   
-    @for (testimonial of feedbacks; track testimonial) {
-        <div class="testimonial-content">
-          <img class="profile-img" [src]="testimonial.image" [alt]="testimonial.nom" />
-          <div class="text-content">
-            <h3 class="name">{{ testimonial.nom }}</h3>
-            <p class="position">{{ testimonial.poste }}</p>
-            <p class="testimonial-text">“{{ testimonial.message }}”</p>
-          </div>
-        </div>
-    }
+  <app-carte [carte]="feedbacks[currentIndex]"></app-carte>
   
   </div>
   
