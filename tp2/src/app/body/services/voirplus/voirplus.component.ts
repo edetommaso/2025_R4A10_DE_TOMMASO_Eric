@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './voirplus.component.sass'
 })
 export class VoirplusComponent {
-
+  button= "Learn more"
 }
