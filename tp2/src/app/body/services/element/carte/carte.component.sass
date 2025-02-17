@@ -1,18 +1,19 @@
 .carte
-  width: 250px // Largeur fixe
-  height: 300px // Hauteur fixe
+  width: 250px
+  height: 300px
   background: white
   border-radius: 16px
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1)
   padding: 25px
+  display: flex
+  margin: auto  
   text-align: left
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out
   cursor: pointer
-  display: flex
   flex-direction: column
   justify-content: center
   align-items: left
-
+  
   &:hover
     transform: translateY(-5px)
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15)

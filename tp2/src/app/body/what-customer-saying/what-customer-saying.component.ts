@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { CarteComponent } from './carte/carte.component';
+import { SwitchComponent } from '../switch/switch.component';
 
 @Component({
   selector: 'app-what-customer-saying',
   standalone: true,
-  imports: [CarteComponent],
+  imports: [CarteComponent,SwitchComponent],
   templateUrl: './what-customer-saying.component.html',
   styleUrl: './what-customer-saying.component.sass'
 })
 export class WhatCustomerSayingComponent {
   currentIndex = 0;
+
+  titre = "What our customers are saying";
   
   feedbacks = [
     {
@@ -32,11 +35,7 @@ export class WhatCustomerSayingComponent {
     }
   ];
   
-  prevSlide() {
-    this.currentIndex = (this.currentIndex - 1 + this.feedbacks.length) % this.feedbacks.length;
-  }
-  
-  nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.feedbacks.length;
+  changeSlide(direction: number) {
+    this.currentIndex = (this.currentIndex + direction + this.feedbacks.length) % this.feedbacks.length;
   }
 }
