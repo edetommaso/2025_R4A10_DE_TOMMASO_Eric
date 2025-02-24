@@ -16,7 +16,7 @@ Créer une application Angular permettant de gérer des voyages, incluant une li
 ### Fonctionnalités demandées :
 
 - **Page d'accueil `/home`**
-
+  
   - Par défaut, l'application doit rediriger vers `/home` (ex: `http://localhost:4200` → `http://localhost:4200/home`).
   - Affichage d’une liste de voyages sous forme de **cartes**.
   - Chaque carte permet :
@@ -45,7 +45,7 @@ Créer une application Angular permettant de gérer des voyages, incluant une li
   - Si validé, le voyage est ajouté à la fin du tableau des destinations, puis l'utilisateur est redirigé vers la page dédiée au voyage.
 
 - **Suppression**
-
+  
   - Avant chaque suppression, une **boîte de dialogue (modal)** demande confirmation.
   - Si la suppression se fait depuis la page du voyage, l’utilisateur est **redirigé vers l’accueil** après confirmation.
 
@@ -64,7 +64,7 @@ Créer une application Angular permettant de gérer des voyages, incluant une li
     - Mention "Copyright + Année en cours" (généré dynamiquement en JS).
 
 - **Responsive**
-
+  
   - Adaptation requise uniquement pour les **écrans supérieurs à 1200px**.
   - Les autres tailles d’écran ne sont pas à prendre en compte pour ce TP.
 
