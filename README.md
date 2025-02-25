@@ -104,7 +104,7 @@ Vous serez notés sur :
    - Stocker les voyages dans un tableau dans un service centralisé.
 
 3. **Ajouter une entrée test**
-
+   
    - Créer manuellement une entrée dans la liste des voyages pour tester l'affichage.
 
 4. **Mettre en place le layout (header/footer)**
@@ -127,7 +127,7 @@ Vous serez notés sur :
    - Afficher les voyages **par lot de 20**.
 
 8. **Implémenter la suppression avec confirmation**
-
+   
    - Ajouter une **boîte de dialogue (modal)** avant suppression.
 
 9. **Refactoriser en composants**
