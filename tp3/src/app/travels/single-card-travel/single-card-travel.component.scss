@@ -1,0 +1,39 @@
+.travel-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  
+    h2 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 8px;
+    }
+  
+    p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  
+    button {
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.2s ease-in-out;
+  
+      &:hover {
+        background: #e63939;
+      }
+    }
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+  

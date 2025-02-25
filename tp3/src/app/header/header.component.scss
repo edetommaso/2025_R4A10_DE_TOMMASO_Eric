@@ -1,8 +1,9 @@
-header{
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: auto;
   padding: 2.5%;
   background-color: #008853;
+  width: 100%;
+  box-sizing: border-box;
 }

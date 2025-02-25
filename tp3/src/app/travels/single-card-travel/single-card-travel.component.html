@@ -1,0 +1,7 @@
+<div class="travel-card">
+    <h2>{{ travel.destination }}</h2>
+    <p>{{ travel.description }}</p>
+    <p>{{ travel.prix.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' }) }}</p>
+    <button (click)="supprimerTravel(travel.id)">Supprimer</button>
+</div>
+  

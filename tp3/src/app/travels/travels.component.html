@@ -1,0 +1,10 @@
+<div class="travels-container">
+    @for (travel of paginatedTravels; track travel.id) {
+      <app-single-card-travel [travel]="travel" [supprimerTravel]="supprimerTravel"></app-single-card-travel>
+    }
+  </div>
+<app-gestion-page-travels
+  [currentPage]="currentPage"
+  [totalPages]="totalPages()"
+  (pageChange)="onPageChange($event)">
+</app-gestion-page-travels>
