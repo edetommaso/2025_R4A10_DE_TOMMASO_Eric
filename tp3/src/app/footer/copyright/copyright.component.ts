@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { info } from 'node:console';
 
 @Component({
   selector: 'app-copyright',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './copyright.component.scss'
 })
 export class CopyrightComponent {
-  
+  année: number = new Date().getFullYear();
+  entreprise:string = "Boston";
+  info: string = `© ${this.année} ${this.entreprise}. Tous droits réservés.`;
 }
