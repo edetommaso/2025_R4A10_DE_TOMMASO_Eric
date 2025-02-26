@@ -31,7 +31,7 @@ Créer une application Angular permettant de gérer des voyages, incluant une li
 
   - Affichage des voyages **20 par 20** pour éviter de surcharger la page.
 
-- **Page dédiée à chaque voyage**
+- **Page dédiée à chaque voyage**✅
 
   - Permet de visualiser toutes les informations d’un voyage.
   - Possibilité de supprimer le voyage directement depuis cette page.
@@ -97,7 +97,7 @@ Vous serez notés sur :
 
 ## Conseils pour la réalisation
 
-1. **Créer les différentes pages**
+1. **Créer les différentes pages**✅
    - Configurer le router Angular et tester la navigation
 2. **Définir le service et le type `Voyage`**✅
 
@@ -112,7 +112,7 @@ Vous serez notés sur :
    - Assurez-vous que le design de base est cohérent.
 
 5. **Implémenter le parcours utilisateur**
-
+   
    - Afficher la liste des voyages.
    - Permettre la navigation vers les détails d'un voyage.
    - Ajouter la suppression et tester la redirection.
