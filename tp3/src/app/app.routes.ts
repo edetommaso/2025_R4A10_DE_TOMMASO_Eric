@@ -8,6 +8,7 @@ export const routes: Routes = [
         component:HomePageComponent,
         path:"home",
     },
+    { path:"home", redirectTo:"",},
     {
         component:GeneratepageComponent,
         path:"generate",
@@ -17,5 +18,5 @@ export const routes: Routes = [
         path:"voyage/:id"
     },
     { path: "404", component: NotFoundPageComponent },
-    { path: "**", redirectTo: "/404" }
+    { path: "**", redirectTo: "404" }
 ];

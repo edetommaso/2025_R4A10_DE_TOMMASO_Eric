@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { RouterLink,RouterLinkActive } from '@angular/router';
 import { BoutonSupprimerComponent } from '../../bouton-supprimer/bouton-supprimer.component';
 
 export interface Travel {
@@ -13,7 +13,7 @@ export interface Travel {
 @Component({
   selector: 'app-single-card-travel',
   standalone: true,
-  imports:[BoutonSupprimerComponent],
+  imports:[BoutonSupprimerComponent,RouterLink,RouterLinkActive],
   templateUrl: './single-card-travel.component.html',
   styleUrl: './single-card-travel.component.scss'
 })
