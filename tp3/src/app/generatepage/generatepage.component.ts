@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
+import { BoutonGenererComponent } from '../bouton-generer/bouton-generer.component';
+import { TravelsService } from '../travels.service';
 
 @Component({
   selector: 'app-generatepage',
   standalone: true,
-  imports: [],
+  imports: [BoutonGenererComponent,],
   templateUrl: './generatepage.component.html',
   styleUrl: './generatepage.component.scss'
 })
-export class GeneratepageComponent {
-
+export class GeneratePageComponent {
+  
+  constructor(private travelsService: TravelsService) {}
+  
+  generateTravel = () => {
+    this.travelsService.generateTravel();
+  };
 }

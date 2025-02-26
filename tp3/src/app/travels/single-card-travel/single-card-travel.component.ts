@@ -18,11 +18,10 @@ export interface Travel {
   styleUrl: './single-card-travel.component.scss'
 })
 export class SingleCardTravelComponent {
-
+  
   @Input() travel!: Travel;
   @Input() supprimerTravel?: (id: string) => void;
-
-  // Bloque la propagation du clic pour empêcher la redirection
+  
   stopPropagation(event: Event) {
     event.stopPropagation();
   }

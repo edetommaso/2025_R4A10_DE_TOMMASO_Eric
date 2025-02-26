@@ -3,5 +3,9 @@
     <img [src]="travel?.representation" [alt]="travel?.destination">
     <p>{{ travel?.description }}</p>
     <p>Prix : {{ travel?.prix }} €</p>
+    <app-bouton-supprimer 
+            [travel]="travel!" 
+            [supprimerTravel]="supprimerTravel">
+        </app-bouton-supprimer>
   </div>
   
