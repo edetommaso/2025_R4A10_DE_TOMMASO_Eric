@@ -8,12 +8,13 @@ export interface Travel {
   destination: string;
   description: string;
   prix: number;
+  representation: string;
 }
 
 @Component({
   selector: 'app-travels',
   standalone: true,
-  imports: [GestionPageTravelsComponent,SingleCardTravelComponent],
+  imports: [GestionPageTravelsComponent, SingleCardTravelComponent],
   templateUrl: './travels.component.html',
   styleUrl: './travels.component.scss'
 })
@@ -22,30 +23,37 @@ export class TravelsComponent implements OnInit {
   travels: Travel[] = [];
   travelsPerPage = 20;
   currentPage = 1;
-
+  
   constructor(private travelsService: TravelsService) {}
-
+  
   ngOnInit() {
+    this.loadTravels();
+  }
+  
+  // ✅ Rafraîchir la liste après suppression
+  loadTravels() {
     this.travels = this.travelsService.getTravel();
   }
-
+  
   get paginatedTravels(): Travel[] {
     const start = (this.currentPage - 1) * this.travelsPerPage;
     return this.travels.slice(start, start + this.travelsPerPage);
   }
-
+  
   totalPages(): number {
     return Math.ceil(this.travels.length / this.travelsPerPage);
   }
-
+  
   onPageChange(page: number) {
     this.currentPage = page;
   }  
-
+  
+  // ✅ Supprimer et rafraîchir la liste
   supprimerTravel(id: string) {
-    if (confirm('Voulez-vous vraiment supprimer ce voyage ?')) {
-      this.travelsService.delTravel(id);
-      this.travels = this.travelsService.getTravel(); // Mise à jour de la liste
+    if(confirm("Supprimer le voyage vers "+this.travelsService.getTravelById(id)?.destination + " ?")){
+    this.travelsService.delTravel(id);
+    this.loadTravels();
     }
   }
+  
 }

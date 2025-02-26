@@ -11,5 +11,5 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class LogoComponent {
   logo = "/assets/boston.jpg";
   route="";
-  title = "Boston";
+  title = "Boston Company";
 }

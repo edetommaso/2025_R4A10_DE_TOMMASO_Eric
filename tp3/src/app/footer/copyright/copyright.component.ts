@@ -10,6 +10,6 @@ import { info } from 'node:console';
 })
 export class CopyrightComponent {
   année: number = new Date().getFullYear();
-  entreprise:string = "Boston";
+  entreprise:string = "Boston Company";
   info: string = `© ${this.année} ${this.entreprise}. Tous droits réservés.`;
 }

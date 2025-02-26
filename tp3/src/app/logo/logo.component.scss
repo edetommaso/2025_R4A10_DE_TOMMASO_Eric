@@ -1,13 +1,27 @@
 #logo{
-  height: 50px;
-  padding:1em;
+  height: 100px;
+  @media (max-width: 600px) {
+    
+    #logo{
+      height: 50px;
+    }
+  }
 }
 p {
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: bold;
   color: whitesmoke;
+
+  @media (max-width: 600px) {
+    p {
+      
+      font-size: 0.5em;
+    } 
+  }
+  
 }
 div{
   display: flex;
   align-items: center;
+  gap: 10px;
 }

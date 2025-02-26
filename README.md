@@ -15,7 +15,7 @@ Créer une application Angular permettant de gérer des voyages, incluant une li
 
 ### Fonctionnalités demandées :
 
-- **Page d'accueil `/home`**
+- **Page d'accueil `/home`**✅
   
   - Par défaut, l'application doit rediriger vers `/home` (ex: `http://localhost:4200` → `http://localhost:4200/home`).
   - Affichage d’une liste de voyages sous forme de **cartes**.
@@ -27,7 +27,7 @@ Créer une application Angular permettant de gérer des voyages, incluant une li
     - Les 20 premiers caractères de la description (slicée avec le SlicePipe)
     - Le prix en € (vous utiliserez également un pipe pour cette mise en forme)
 
-- **Pagination**
+- **Pagination**✅
 
   - Affichage des voyages **20 par 20** pour éviter de surcharger la page.
 
@@ -44,7 +44,7 @@ Créer une application Angular permettant de gérer des voyages, incluant une li
   - Le voyage généré est affiché à l'écran, avec un bouton permettant de valider la création
   - Si validé, le voyage est ajouté à la fin du tableau des destinations, puis l'utilisateur est redirigé vers la page dédiée au voyage.
 
-- **Suppression**
+- **Suppression**✅
   
   - Avant chaque suppression, une **boîte de dialogue (modal)** demande confirmation.
   - Si la suppression se fait depuis la page du voyage, l’utilisateur est **redirigé vers l’accueil** après confirmation.
@@ -54,7 +54,7 @@ Créer une application Angular permettant de gérer des voyages, incluant une li
 
 ## Layout et Design
 
-- **Header & Footer présents sur toutes les pages**
+- **Header & Footer présents sur toutes les pages**✅
 
   - **Header** : Nom de l’application et navigation entre :
     - La page liste des voyages.
@@ -63,7 +63,7 @@ Créer une application Angular permettant de gérer des voyages, incluant une li
     - Reprend le nom de l’agence de voyage.
     - Mention "Copyright + Année en cours" (généré dynamiquement en JS).
 
-- **Responsive**
+- **Responsive**✅
   
   - Adaptation requise uniquement pour les **écrans supérieurs à 1200px**.
   - Les autres tailles d’écran ne sont pas à prendre en compte pour ce TP.
@@ -76,7 +76,7 @@ Créer une application Angular permettant de gérer des voyages, incluant une li
     - **Tailwind**
     - **Ou un autre outil de design de votre choix**
 
-- **Images**
+- **Images**✅
   - Vous pouvez ajouter des images pour illustrer les voyages.
 
 ## Bonus
@@ -99,15 +99,15 @@ Vous serez notés sur :
 
 1. **Créer les différentes pages**
    - Configurer le router Angular et tester la navigation
-2. **Définir le service et le type `Voyage`**
+2. **Définir le service et le type `Voyage`**✅
 
    - Stocker les voyages dans un tableau dans un service centralisé.
 
-3. **Ajouter une entrée test**
+3. **Ajouter une entrée test**✅
    
    - Créer manuellement une entrée dans la liste des voyages pour tester l'affichage.
 
-4. **Mettre en place le layout (header/footer)**
+4. **Mettre en place le layout (header/footer)**✅
 
    - Assurez-vous que le design de base est cohérent.
 
@@ -123,7 +123,7 @@ Vous serez notés sur :
    - Afficher les informations générées avant validation.
 
 7. **Gérer la pagination sur la liste des voyages**
-
+   
    - Afficher les voyages **par lot de 20**.
 
 8. **Implémenter la suppression avec confirmation**

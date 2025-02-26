@@ -12,7 +12,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 export class NavbarComponent {
   menus = [
-    { label: "Home",route:"" },
+    { label: "Home",route:"home" },
     { label: "Generate",route:"generate" },
   ];
 }

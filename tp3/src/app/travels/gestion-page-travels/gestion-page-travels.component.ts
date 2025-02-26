@@ -9,11 +9,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class GestionPageTravelsComponent {
   @Input() currentPage!: number;
   @Input() totalPages!: number;
-  @Output() pageChange = new EventEmitter<number>();
+  @Output() changementPage = new EventEmitter<number>();
 
   goToPage(page: number) {
     if (page >= 1 && page <= this.totalPages) {
-      this.pageChange.emit(page);
+      this.changementPage.emit(page);
     }
   }
 }

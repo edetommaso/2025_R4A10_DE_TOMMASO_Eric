@@ -1,6 +1,6 @@
 <div class="pagination">
-    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Précédent</button>
+    <button (click)="goToPage(currentPage - 1)" >Précédent</button>
     <span>Page {{ currentPage }} / {{ totalPages }}</span>
-    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Suivant</button>
+    <button (click)="goToPage(currentPage + 1)">Suivant</button>
   </div>
   
