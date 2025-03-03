@@ -20,8 +20,8 @@ export class BoutonSupprimerComponent {
   
   route="/";
   
-  @Input() travel!: Travel;  // Récupère le voyage à supprimer
-  @Input() supprimerTravel?: (id: string) => void; // Fonction de suppression à injecter
+  @Input() travel!: Travel; 
+  @Input() supprimerTravel?: (id: string) => void;
   
   
 supression() {

@@ -30,7 +30,6 @@ export class TravelsComponent implements OnInit {
     this.loadTravels();
   }
   
-  // ✅ Rafraîchir la liste après suppression
   loadTravels() {
     this.travels = this.travelsService.getTravel();
   }
@@ -48,7 +47,7 @@ export class TravelsComponent implements OnInit {
     this.currentPage = page;
   }  
   
-  // ✅ Supprimer et rafraîchir la liste
+
   supprimerTravel(id: string) {
     if(confirm("Supprimer le voyage vers "+this.travelsService.getTravelById(id)?.destination + " ?")){
     this.travelsService.delTravel(id);

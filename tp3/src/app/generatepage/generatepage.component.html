@@ -1,4 +1,17 @@
 <div>
     <h2>Generate Page</h2>
+    
     <app-bouton-generer [generateTravel]="generateTravel"></app-bouton-generer>
+    
+    <div class="travel-container" [class.hidden]="!generatedTravel">
+        <h3>Voyage Généré :</h3>
+        <p>Destination : {{ generatedTravel?.destination }}</p>
+        <p>Description : {{ generatedTravel?.description }}</p>
+        <p>Prix : {{ generatedTravel?.prix }} €</p>
+        <img [src]="generatedTravel?.representation" alt="Image du voyage" width="200">
+    </div>
+
+    <button (click)="confirmTravel()" [disabled]="!generatedTravel">
+        Confirmer le voyage
+    </button>
 </div>

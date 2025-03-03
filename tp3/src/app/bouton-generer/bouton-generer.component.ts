@@ -12,7 +12,7 @@ export class BoutonGenererComponent {
   @Input() generateTravel?: () => void; 
   
   onGenerate() {
-    if (typeof this.generateTravel === 'function') { // Vérifie si la fonction est définie
+    if (typeof this.generateTravel === 'function') {
       this.generateTravel();
     } else {
       console.error("Erreur: generateTravel n'est pas défini !");
