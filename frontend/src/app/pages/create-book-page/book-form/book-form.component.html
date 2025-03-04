@@ -1,0 +1,13 @@
+<div class="form-group">
+    <label [for]="id">{{ label }}</label>
+  
+    <input [id]="id" [type]="type" [formControl]="control">
+    
+    <div class="error-messages" [class.hidden]="control.valid || !(control.dirty || control.touched)">
+        <p>Ce champ est obligatoire.</p>
+        <p>Minimum {{ control.errors?.['minlength']?.requiredLength }} caractères.</p>
+        <p>Maximum {{ control.errors?.['maxlength']?.requiredLength }} caractères.</p>
+      </div>
+      
+  </div>
+  

@@ -6,13 +6,14 @@ import {
   Validators,
 } from '@angular/forms';
 import { BookApiService } from '../../services/book-api.service';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 import { Book } from '../../models/book';
+import { BookFormComponent } from './book-form/book-form.component';
 
 @Component({
   selector: 'app-create-book-page',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,BookFormComponent],
   templateUrl: './create-book-page.component.html',
   styleUrl: './create-book-page.component.css',
 })
@@ -28,29 +29,24 @@ export class CreateBookPageComponent {
   
   constructor(
     private bookService: BookApiService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
   
-  /*
-  // ancien Service
-  onSubmit() {
-    if (this.bookForm.valid) {
-      const newBook = this.bookForm.value as Omit<Book, 'id' | 'coverUrl'>;
-      const bookId = this.bookService.createBook(newBook);
-      this.bookCreationEventEmitter.emit({ ...newBook, id: bookId, coverUrl: 'https://placehold.co/150x200' });
-      this.router.navigate(['/book', bookId]);
-    }
-  }
-  */
   
   onSubmit() {
     if (this.bookForm.valid) {
       this.bookService.createBook(this.bookForm.value as Book).subscribe(() => {
         this.bookForm.reset();
+        this.router.navigate(['/']);
       }
       );
-    
+      
     }
   }
-
+  
+  formControl(value:string): FormControl {
+    return this.bookForm.get(value) as FormControl;
+  }
+  
 }
