@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Book } from '../../models/book';
-import { BooksInMemoryService } from '../../services/book-inmemory.service';
+import { BookApiService } from '../../services/book-api.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -11,10 +11,12 @@ import { RouterLink } from '@angular/router';
   styleUrl: './book-list-page.component.css',
 })
 export class BookListPageComponent implements OnInit {
-  private readonly bookService = inject(BooksInMemoryService);
+  private readonly bookService = inject(BookApiService);
   books: Book[] = [];
 
   ngOnInit() {
-    this.books = this.bookService.getAllBooks();
+    this.bookService.getAllBooks().subscribe((data: Book[]) => {
+      this.books = data;
+    });
   }
 }
